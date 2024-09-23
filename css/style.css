@@ -1,0 +1,484 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #F5F5DC; /* Beige o crema */
+    color: #000000; /* Negro */
+}
+
+/* Estilos del Header (Cabecera) */
+.header {
+    background-color: #000000; /* Fondo negro */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: #FFFFFF; /* Texto blanco */
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    color: #F5F5DC; /* Texto crema */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Transición en color */
+}
+
+.menu a:hover {
+    color: #6A0DAD; /* Morado al pasar el ratón */
+}
+
+/* Botón de inicio de sesión */
+.login-btn {
+    background-color: #6A0DAD; /* Fondo morado */
+    color: #FFFFFF; /* Texto blanco */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #F5F5DC; /* Cambia a crema al pasar el ratón */
+    color: #000000; /* Texto negro */
+}
+
+
+/* Banner Principal */
+.banner {
+    background: linear-gradient(135deg, #F5F5DC, #6A0DAD, #000000); /* Degradado crema a morado y luego a negro */
+    text-align: center;
+    padding: 100px 20px;
+    color: #F5F5DC; /* Texto crema */
+}
+
+.banner h1 {
+    font-size: 48px;
+}
+
+.banner p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.cta-btn {
+    background-color: #6A0DAD; /* Botón morado */
+    color: #FFFFFF; /* Texto blanco */
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+
+/* Sección de Servicios con Animaciones */
+.services {
+    background-color: #F5F5DC; /* Fondo beige */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.services h2 {
+    color: #6A0DAD; /* Título morado */
+    margin-bottom: 40px;
+}
+
+.service-item {
+    background-color: #FFFFFF; /* Fondo blanco */
+    color: #000000; /* Texto negro */
+    padding: 30px;
+    margin: 10px;
+    display: inline-block;
+    width: 30%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Icono de cada servicio */
+.service-icon {
+    font-size: 50px;
+    color: #6A0DAD; /* Icono morado */
+    margin-bottom: 20px;
+}
+
+/* Animación al hacer hover (pasar el ratón) sobre cada servicio */
+.service-item:hover {
+    transform: translateY(-10px); /* Eleva el contenedor */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+/* Transición suave para los textos */
+.service-item h3, .service-item p {
+    transition: color 0.3s ease;
+}
+
+/* Cambio de color del texto al pasar el ratón */
+.service-item:hover h3, .service-item:hover p {
+    color: #6A0DAD; /* Cambia el texto a morado */
+}
+
+/* Efecto antes de aparecer (antes del hover) */
+.service-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 5px;
+    background-color: #6A0DAD; /* Línea morada */
+    transition: left 0.3s ease;
+}
+
+/* La línea se desliza hacia la derecha cuando se pasa el ratón */
+.service-item:hover::before {
+    left: 0;
+}
+
+/* Sección de Noticias con Animaciones */
+.news {
+    background-color: #FFFFFF;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.news h2 {
+    color: #000000; /* Título negro */
+    margin-bottom: 40px;
+}
+
+/* Estilo de cada noticia */
+.news-item {
+    background-color: #F5F5DC; /* Fondo beige */
+    color: #000000; /* Texto negro */
+    padding: 30px;
+    margin: 10px;
+    display: inline-block;
+    width: 30%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Icono de cada noticia */
+.news-image {
+    font-size: 50px;
+    color: #6A0DAD; /* Icono morado */
+    margin-bottom: 20px;
+}
+
+/* Efecto hover para cada noticia */
+.news-item:hover {
+    transform: translateY(-10px); /* Eleva el contenedor */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+/* Transición de color del título y descripción */
+.news-item h3, .news-item p {
+    transition: color 0.3s ease;
+}
+
+.news-item:hover h3, .news-item:hover p {
+    color: #6A0DAD; /* Cambia el texto a morado */
+}
+
+/* Efecto línea antes del hover */
+.news-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 5px;
+    background-color: #6A0DAD; /* Línea morada */
+    transition: left 0.3s ease;
+}
+
+.news-item:hover::before {
+    left: 0;
+}
+
+/* Estilo del enlace "Leer más" */
+.read-more {
+    display: inline-block;
+    margin-top: 15px;
+    color: #6A0DAD; /* Texto morado */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: #000000; /* Cambia a negro al pasar el ratón */
+}
+/* Sección de Testimonios con Animaciones */
+.testimonials {
+    background-color: #000000; /* Fondo negro */
+    color: #F5F5DC; /* Texto crema */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.testimonials h2 {
+    color: #F5F5DC; /* Título en crema */
+    margin-bottom: 40px;
+}
+
+.testimonial-item {
+    background-color: #F5F5DC; /* Fondo beige */
+    color: #000000; /* Texto negro */
+    padding: 30px;
+    margin: 10px;
+    display: inline-block;
+    width: 30%;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+/* Animación al hacer hover sobre cada testimonio */
+.testimonial-item:hover {
+    transform: translateY(-10px); /* Eleva el contenedor */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+/* Efecto de color al pasar el ratón sobre el texto */
+.testimonial-item p {
+    transition: color 0.3s ease;
+}
+
+.testimonial-item:hover p {
+    color: #6A0DAD; /* Texto en morado al pasar el ratón */
+}
+
+/* Estilos del nombre del cliente */
+.testimonial-item span {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #6A0DAD; /* Nombre del cliente en morado */
+    transition: color 0.3s ease;
+}
+
+.testimonial-item:hover span {
+    color: #000000; /* Nombre cambia a negro al pasar el ratón */
+}
+
+/* Línea decorativa que aparece en hover */
+.testimonial-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 5px;
+    background-color: #6A0DAD; /* Línea morada */
+    transition: left 0.3s ease;
+}
+
+.testimonial-item:hover::before {
+    left: 0;
+}
+
+/* Sección de Información con Imágenes */
+.info-cards {
+    background-color: #FFFFFF; /* Fondo blanco para la sección */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.info-cards h2 {
+    color: #000000; /* Título negro */
+    margin-bottom: 40px;
+}
+
+/* Estilo de cada tarjeta de información */
+.info-card {
+    background-color: #F5F5DC; /* Fondo beige */
+    color: #000000; /* Texto negro */
+    padding: 20px;
+    margin: 10px;
+    display: inline-block;
+    width: 30%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Imagen de cada tarjeta */
+.info-image {
+    width: 100%;
+    height: 200px; /* Ajusta según el tamaño deseado */
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+/* Contenido de cada tarjeta */
+.info-content {
+    padding: 15px;
+}
+
+/* Título y descripción de la tarjeta */
+.info-content h3, .info-content p {
+    transition: color 0.3s ease;
+}
+
+.info-card:hover h3, .info-card:hover p {
+    color: #6A0DAD; /* Cambia el texto a morado al pasar el ratón */
+}
+
+/* Efecto hover para cada tarjeta */
+.info-card:hover {
+    transform: translateY(-10px); /* Eleva el contenedor */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+/* Efecto línea antes del hover */
+.info-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 5px;
+    background-color: #6A0DAD; /* Línea morada */
+    transition: left 0.3s ease;
+}
+
+.info-card:hover::before {
+    left: 0;
+}
+
+/* Estilos del Footer (Pie de página) */
+.footer {
+    background-color: #000000; /* Fondo negro */
+    color: #F5F5DC; /* Texto crema */
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer p {
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.social-icons a {
+    color: #6A0DAD; /* Iconos morados */
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Transición en color */
+}
+
+.social-icons a:hover {
+    color: #F5F5DC; /* Cambia a crema al pasar el ratón */
+}
+
+
+/* Estilos para la sección de autenticación con fondo degradado */
+.auth-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #F5F5DC, #6A0DAD, #1c1c1c); /* Degradado crema, morado y negro */
+}
+
+/* Tarjetas con fondo crema */
+.auth-card {
+    background-color: #F5F5DC; /* Fondo crema */
+    color: #000000; /* Texto negro */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    margin: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth-card h2 {
+    color: #6A0DAD; /* Título morado */
+    margin-bottom: 20px;
+}
+
+/* Estilo de los formularios */
+.auth-card form {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-card label {
+    color: #6A0DAD; /* Etiquetas moradas */
+    margin-bottom: 5px;
+}
+
+.auth-card input {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #6A0DAD;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #000;
+    transition: border-color 0.3s ease;
+}
+
+.auth-card input:focus {
+    border-color: #6A0DAD; /* Borde morado al enfocarse */
+}
+
+.auth-card button {
+    background-color: #6A0DAD; /* Fondo morado */
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.auth-card button:hover {
+    background-color: #1c1c1c; /* Cambia a negro al pasar el ratón */
+}
+
+/* Enlace para alternar entre los formularios */
+/* Estilos para los enlaces de botones */
+.auth-button {
+    display: inline-block;
+    background-color: #6A0DAD; /* Fondo morado */
+    color: #fff; /* Texto blanco */
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    border-radius: 5px;
+    text-decoration: none; /* Eliminar subrayado */
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    margin-left: -8px;
+}
+
+.auth-button:hover {
+    background-color: #1c1c1c; /* Cambia a negro al pasar el ratón */
+    color: #fff; /* Mantener el texto blanco */
+}
